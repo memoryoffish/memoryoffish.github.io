@@ -14,7 +14,7 @@
 <meta property="og:description" content="性能$性能&#x3D;\frac{1}{执行时间}$X是Y的n倍快：$\frac{性能x}{性能y}&#x3D;n$我们用CPU(执行)时间来反映在CPU花费时间，而非CPU工作时间$程序CPU执行时间&#x3D;\frac{程序的CPU时钟周期数}{时钟频率}$提升到原来多少是指原来的多少倍CPI每条指令所需平均时钟周期$CPU时间&#x3D;\frac{指令数*CPI}{时钟频率}$ 指令：计">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-04-28T09:15:00.000Z">
-<meta property="article:modified_time" content="2025-01-17T06:55:55.676Z">
+<meta property="article:modified_time" content="2025-01-17T06:59:46.354Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="笔者是菜鸟，上课不记笔记，因而只有补天笔记了">
 <meta name="twitter:card" content="summary">
@@ -488,7 +488,7 @@
 <li>复制（replication）：共享数据被同时读取时，cache在本地对数据项做备份，减少读取竞争<br>cache一致性协议：最常用的是监听(snooping)协议。cache保留数据块共享状态的副本，不集中保存状态。所有cache控制器对广播介质（总线或者网络）进行监视或者监听，来确保是否由总线或交换机上的数据块副本。</li>
 </ul>
 <h4 id="监听协议"><a href="#监听协议" class="headerlink" title="监听协议"></a>监听协议</h4><p>写无效协议(write invalidate protocol)处理器写操作前令其他副本无效。此时其他处理器读时需要重新请求新的数据副本，这时仍有效的CPU数据副本就会响应。<br>不过写操作处理器要独占访问，采用random rule。</p>
-<h2 id="I-O"><a href="#I-O" class="headerlink" title="I&#x2F;O"></a>I&#x2F;O</h2><p>打印机采用轮询（polling）方式，其他基本采用中断，较慢的情况下<br>![[Pasted image 20250117145444.png]]<br>![[Pasted image 20250117145554.png]]</p>
+<h2 id="I-O"><a href="#I-O" class="headerlink" title="I&#x2F;O"></a>I&#x2F;O</h2><p>打印机采用轮询（polling）方式，其他基本采用中断，较慢的情况下<br>![[Pasted image 20250117145444.png]]<br>![[Pasted image 20250117145554.png]]![[Pasted image 20250117145945.png]]</p>
 
       
     </div>
