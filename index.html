@@ -528,7 +528,7 @@
 <li>复制（replication）：共享数据被同时读取时，cache在本地对数据项做备份，减少读取竞争<br>cache一致性协议：最常用的是监听(snooping)协议。cache保留数据块共享状态的副本，不集中保存状态。所有cache控制器对广播介质（总线或者网络）进行监视或者监听，来确保是否由总线或交换机上的数据块副本。</li>
 </ul>
 <h4 id="监听协议"><a href="#监听协议" class="headerlink" title="监听协议"></a>监听协议</h4><p>写无效协议(write invalidate protocol)处理器写操作前令其他副本无效。此时其他处理器读时需要重新请求新的数据副本，这时仍有效的CPU数据副本就会响应。<br>不过写操作处理器要独占访问，采用random rule。</p>
-<h2 id="I-O"><a href="#I-O" class="headerlink" title="I&#x2F;O"></a>I&#x2F;O</h2><p>打印机采用轮询（polling）方式，其他基本采用中断，较慢的情况下</p>
+<h2 id="I-O"><a href="#I-O" class="headerlink" title="I&#x2F;O"></a>I&#x2F;O</h2><p>打印机采用轮询（polling）方式，其他基本采用中断，较慢的情况下<br>![[Pasted image 20250117145444.png]]<br>![[Pasted image 20250117145554.png]]</p>
 
       
     </div>
