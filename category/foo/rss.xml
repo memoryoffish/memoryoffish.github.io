@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<rss version="2.0">
+    <channel>
+        <title>Blog • Posts by &#34;foo&#34; category</title>
+        <link>http://example.com</link>
+        <description></description>
+        <language>zh-CN</language>
+        <pubDate>Tue, 24 Dec 2013 23:30:09 +0800</pubDate>
+        <lastBuildDate>Tue, 24 Dec 2013 23:30:09 +0800</lastBuildDate>
+        <category>笔者是菜鸟，上课不记笔记，因而只有补天笔记了</category>
+        <category>Foo</category>
+        <category>Bar</category>
+        <category>Baz</category>
+        <item>
+            <guid isPermalink="true">http://example.com/2013/12/24/categories/</guid>
+            <title>Categories</title>
+            <link>http://example.com/2013/12/24/categories/</link>
+            <pubDate>Tue, 24 Dec 2013 23:30:09 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;This post contains 3 categories. Make sure your theme can display all of the categories.&lt;/p&gt;
+ ]]></description>
+        </item>
+    </channel>
+</rss>
