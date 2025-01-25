@@ -10,9 +10,9 @@
     </author>
     <updated>2025-01-25T09:15:00.000Z</updated>
     <entry>
-        <id>https://memoryoffish.github.io/2025/01/25/%E9%80%9A%E8%AF%86%E8%AF%BE/%E6%B1%87%E7%BC%96/mips/</id>
+        <id>https://memoryoffish.github.io/2025/01/25/less/x86/mips/</id>
         <title>x86汇编笔记</title>
-        <link rel="alternate" href="https://memoryoffish.github.io/2025/01/25/%E9%80%9A%E8%AF%86%E8%AF%BE/%E6%B1%87%E7%BC%96/mips/"/>
+        <link rel="alternate" href="https://memoryoffish.github.io/2025/01/25/less/x86/mips/"/>
         <content type="html">&lt;h1 id=&#34;期末复习&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#期末复习&#34;&gt;#&lt;/a&gt; 期末复习&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;dos 程序里有 edit main.asm 这条 edit 指令按 F3 和 E 退出&lt;/li&gt;
