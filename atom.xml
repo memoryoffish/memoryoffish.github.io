@@ -10,9 +10,9 @@
     </author>
     <updated>2025-01-25T09:15:00.000Z</updated>
     <entry>
-        <id>https://memoryoffish.github.io/2025/01/25/less/x86/mips/</id>
+        <id>https://memoryoffish.github.io/2025/01/25/less/x86/x86/</id>
         <title>x86汇编笔记</title>
-        <link rel="alternate" href="https://memoryoffish.github.io/2025/01/25/less/x86/mips/"/>
+        <link rel="alternate" href="https://memoryoffish.github.io/2025/01/25/less/x86/x86/"/>
         <content type="html">&lt;h1 id=&#34;期末复习&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#期末复习&#34;&gt;#&lt;/a&gt; 期末复习&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;dos 程序里有 edit main.asm 这条 edit 指令按 F3 和 E 退出&lt;/li&gt;
@@ -726,6 +726,8 @@ int 21h 是输出 dl 的字符&lt;br /&gt;
  mov ah,9&lt;br /&gt;
 int 21h 是输出 ds：dx 指向的以 &#39;$&#39; 结尾的字符串&lt;/p&gt;
 </content>
+        <category term="通识课" scheme="https://memoryoffish.github.io/categories/less/" />
+        <category term="汇编" scheme="https://memoryoffish.github.io/categories/less/x86/" />
         <category term="笔者是菜鸟，上课不记笔记，因而只有补天笔记了" scheme="https://memoryoffish.github.io/tags/%E7%AC%94%E8%80%85%E6%98%AF%E8%8F%9C%E9%B8%9F%EF%BC%8C%E4%B8%8A%E8%AF%BE%E4%B8%8D%E8%AE%B0%E7%AC%94%E8%AE%B0%EF%BC%8C%E5%9B%A0%E8%80%8C%E5%8F%AA%E6%9C%89%E8%A1%A5%E5%A4%A9%E7%AC%94%E8%AE%B0%E4%BA%86/" />
         <updated>2025-01-25T09:15:00.000Z</updated>
     </entry>
