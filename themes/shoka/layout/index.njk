@@ -6,7 +6,8 @@
 {% block header %}
   {% set profile = site.data.profile %}
   <div class="home-profile-hero">
-    <h1 class="title profile-name">{{ profile.name or author }}{% if profile.english_name %}<span>{{ profile.english_name }}</span>{% endif %}</h1>
+    <h1 class="title profile-name">{{ alternate or title }}</h1>
+    <p class="profile-author">{{ profile.name or author }}{% if profile.english_name %}<span>{{ profile.english_name }}</span>{% endif %}</p>
     {% if profile.education %}<p class="meta">{{ profile.education }}</p>{% endif %}
     {% if profile.research %}<p class="profile-research">{{ profile.research }}</p>{% endif %}
   </div>

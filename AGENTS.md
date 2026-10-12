@@ -1,7 +1,7 @@
 # Blog maintenance
 
 - User explicitly chose the original **Hexo + Shoka 0.2.5** design. Do not switch frameworks/themes again or introduce the cream academic homepage styling. References may inform project content organization.
-- Public-facing identity is 李业 / Ye Li. Remove the nickname 小丑鱼; keep memoryoffish only where it is the actual GitHub account or URL. The homepage starts with a personal introduction, followed by research projects and notes.
+- The blog brand is **memory of fish**. The author and personal introduction use **李业 / Ye Li**. Keep these distinct: do not rename the blog to the author's name. Remove the nickname 小丑鱼; keep memoryoffish as the actual GitHub account/URL. The homepage starts with a personal introduction, followed by research projects and notes.
 - Preserve the header, wave divider, article cards and sidebar. No music/player, fireworks, loading masks, autoplay media, decorative transitions, remote fonts or CDN dependencies.
 - Preserve old article URLs and `/pdfs/mips.pdf`. Do not import private notes automatically. Public project entries include ATAS, ReCA and Game24 GRPO; distinguish preprints from accepted publications, and examples from measured results. The user confirmed ATAS equal-first authorship; its public project page also marks Ye Li with equal contribution.
 - The published source branch is `main`; create a work branch for changes. The old generated site remains on `master`. Do not push or change GitHub Pages settings without user authorization.
