@@ -35,7 +35,7 @@ audio: false
 
 我参与 Gen-RSI 的后训练实现与实验。该工作将生成视频转化为可执行的 Blender 代理，通过物理仿真修正代理，再用渲染结果引导教师模型，在学生自身的去噪状态上训练视频生成器，以改进物理一致性。
 
-[项目页面](https://gen-rsi.vmv.re/)
+[论文 · OpenReview](https://openreview.net/forum?id=noC2O6ZFgM) · [项目页面](https://gen-rsi.vmv.re/) · [本站项目介绍](/projects/)
 
 ### 后端开发实习
 

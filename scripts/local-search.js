@@ -1,13 +1,20 @@
 'use strict';
 const { stripHTML } = require('hexo-util');
-hexo.extend.generator.register('local-search', locals => ({
-  path: 'search.json',
-  data: JSON.stringify(locals.posts.sort('-date').map(post => ({
-    title: post.title,
-    url: '/' + post.path.replace(/index\.html$/, ''),
-    content: stripHTML(post.content)
-  })))
-}));
+hexo.extend.generator.register('local-search', locals => {
+  const searchablePages = new Set(['projects/index.html', 'about/index.html']);
+  const entries = [
+    ...locals.pages.filter(page => searchablePages.has(page.path)).toArray(),
+    ...locals.posts.sort('-date').toArray()
+  ];
+  return {
+    path: 'search.json',
+    data: JSON.stringify(entries.map(entry => ({
+      title: entry.title,
+      url: '/' + entry.path.replace(/index\.html$/, ''),
+      content: stripHTML(entry.content)
+    })))
+  };
+});
 hexo.extend.generator.register('json-feed', locals => ({
   path: 'feed.json',
   data: JSON.stringify({

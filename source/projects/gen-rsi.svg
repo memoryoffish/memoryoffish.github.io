@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img" aria-labelledby="title desc">
+  <title id="title">Gen-RSI 世界代理反馈</title>
+  <desc id="desc">生成视频转为世界代理，经物理仿真修正，再反馈到视频生成器。概念示意，非实验结果。</desc>
+  <rect width="720" height="420" rx="18" fill="#eceaf5"/>
+  <g fill="#faf9fd" stroke="#8d81b0" stroke-width="3">
+    <rect x="42" y="100" width="176" height="158" rx="14"/>
+    <rect x="272" y="100" width="176" height="158" rx="14"/>
+    <rect x="502" y="100" width="176" height="158" rx="14"/>
+  </g>
+  <g fill="none" stroke="#8d81b0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M234 178h22m-8-8 8 8-8 8M464 178h22m-8-8 8 8-8 8"/>
+    <path d="M590 278v45H130v-45m-8 8 8-8 8 8"/>
+  </g>
+  <g fill="#c1b6de" stroke="#78669e" stroke-width="3">
+    <rect x="69" y="132" width="122" height="86" rx="8"/>
+    <path d="M344 132l47 27v54l-47 27-47-27v-54z"/>
+    <path d="M297 159l47 27 47-27M344 186v54" fill="none"/>
+  </g>
+  <path d="m119 152 31 23-31 23z" fill="#faf9fd"/>
+  <path d="M530 222h119M543 140q14 17 27 37t49 37" fill="none" stroke="#bca6c7" stroke-width="4" stroke-dasharray="7 8"/>
+  <circle cx="618" cy="199" r="15" fill="#d9aa85" stroke="#aa805f" stroke-width="3"/>
+  <g fill="#574975" font-family="system-ui,sans-serif" font-size="20" font-weight="650" text-anchor="middle">
+    <text x="130" y="75">VIDEO</text><text x="360" y="75">WORLD PROXY</text><text x="590" y="75">PHYSICS</text>
+    <text x="360" y="377">RECURSIVE SELF-IMPROVEMENT</text>
+  </g>
+</svg>

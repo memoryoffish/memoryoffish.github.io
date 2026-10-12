@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check the generated site's reading, migration and local-asset contracts."""
+"""Check published research content, withdrawn routes and local assets."""
 from html.parser import HTMLParser
 from pathlib import Path
 from urllib.parse import unquote, urlsplit
@@ -73,14 +73,31 @@ def main():
             target = local_target(url, path)
             if target is not None and not target.exists():
                 errors.append(f'Broken local link: {path.relative_to(PUBLIC)} -> {url}')
-    required = ['index.html', 'search/index.html', 'archives/index.html', 'search.json', 'atom.xml', 'rss.xml',
-                '2024/04/28/mips/index.html', '2025/02/18/数据库/index.html', 'pdfs/mips.pdf']
+    required = ['index.html', 'projects/index.html', 'about/index.html', 'search/index.html',
+                'search.json', 'feed.json', 'projects/gen-rsi.svg']
     for name in required:
         if not (PUBLIC / name).is_file():
-            errors.append(f'Missing migrated route or asset: {name}')
-    mips = pages.get(PUBLIC / '2024/04/28/mips/index.html')
-    if not mips or mips.math != 15:
-        errors.append(f'Expected 15 rendered formulas, got {mips.math if mips else 0}')
+            errors.append(f'Missing published route or asset: {name}')
+    withdrawn = ['2024/04/28/mips', '2025/02/18/数据库', 'pdfs/mips.pdf',
+                 'images/mips-cover.svg', 'images/mips-floating-range.png', 'images/sql-cover.svg',
+                 'projects/game24-grpo.svg', 'archive']
+    for name in withdrawn:
+        if (PUBLIC / name).exists():
+            errors.append(f'Withdrawn content is still published: {name}')
+    forbidden = ('计原笔记', 'SQL 基础笔记', '用 GRPO 训练模型解 24 点',
+                 'nlp_grpo', 'game24-grpo', '/2024/04/28/mips/', '/2025/02/18/数据库/', '/pdfs/mips.pdf')
+    for path in PUBLIC.rglob('*'):
+        if path.is_file() and path.suffix in ('.html', '.json', '.xml'):
+            content = path.read_text()
+            for term in forbidden:
+                if term in content:
+                    errors.append(f'Withdrawn content reference: {path.relative_to(PUBLIC)} -> {term}')
+    for name in ('index.html', 'projects/index.html', 'about/index.html'):
+        page = pages.get(PUBLIC / name)
+        if page is None or 'https://openreview.net/forum?id=noC2O6ZFgM' not in page.links:
+            errors.append(f'Gen-RSI OpenReview link missing from {name}')
+        if page is not None and not all(term in (PUBLIC / name).read_text() for term in ('ATAS', 'ReCA', 'Gen-RSI')):
+            errors.append(f'Research project missing from {name}')
     stylesheet = PUBLIC / 'css/app.css'
     if not stylesheet.exists() or stylesheet.stat().st_size < 1000:
         errors.append('Shoka stylesheet was not compiled successfully')
@@ -92,8 +109,10 @@ def main():
         if '@import' in text or '@font-face' in text:
             errors.append(f'Unexpected font/import dependency: {css.relative_to(PUBLIC)}')
     index = json.loads((PUBLIC / 'search.json').read_text())
-    if not any('SQL 基础笔记' == item.get('title') for item in index):
-        errors.append('SQL article missing from search index')
+    if not any(item.get('url') == '/projects/' and 'Gen-RSI' in item.get('content', '') for item in index):
+        errors.append('Gen-RSI project missing from search index')
+    if not any(item.get('url') == '/about/' for item in index):
+        errors.append('Personal introduction missing from search index')
     initial = {PUBLIC / 'index.html'}
     for url in home.resources:
         target = local_target(url, PUBLIC / 'index.html')
@@ -105,7 +124,7 @@ def main():
         errors.append(f'Initial HTML/CSS/icons exceed 80 kB gzip budget: {bytes_gzip}')
     if errors:
         raise SystemExit('\n'.join(errors))
-    print(f'PASS: {len(pages)} HTML pages; old routes and PDF; 15 MathML formulas; local assets; no audio.')
+    print(f'PASS: {len(pages)} HTML pages; Gen-RSI links; withdrawn course content absent; search; local assets; no audio.')
     print(f'Home resource files: {len(initial)}, {bytes_raw:,} bytes raw, {bytes_gzip:,} bytes gzip estimate.')
     print('Browser behavior, actual transfer sizes, mobile layout and deployed latency require separate verification.')
 

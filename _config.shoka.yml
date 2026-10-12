@@ -13,8 +13,6 @@ font:
 menu:
   home: / || home
   projects: /projects/ || feather
-  archives: /archives/ || list-alt
-  tags: /tags/ || tags
   search: /search/ || search
   about: /about/ || user
 social:

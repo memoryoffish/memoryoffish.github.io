@@ -2,7 +2,7 @@
 title: 搜索
 layout: search
 permalink: search/
-description: 按标题和正文搜索文章。
+description: 搜索研究项目与个人介绍。
 cover: /images/blog-cover.svg
 count: false
 comments: false

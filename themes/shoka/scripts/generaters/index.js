@@ -82,10 +82,13 @@ hexo.extend.generator.register('index', function(locals) {
     });
   } else {
     pages = [{
-        path,
+        path: path + 'index.html',
         layout: ['index', 'archive'],
         data: {
           __index: true,
+          current: 1,
+          total: 1,
+          posts: posts,
           catlist: catlist,
           sticky: sticky
         }

@@ -22,12 +22,14 @@
     - label: 展示仓库
       url: https://github.com/memoryoffish/ReCA
 
-- name: game24-grpo
-  title: "用 GRPO 训练模型解 24 点"
-  kind: "强化学习 · 课程项目"
-  description: "基于 veRL 与 Qwen2.5-1.5B-Instruct，整理 24 点任务的数据准备、SFT 冷启动、GRPO 训练和 Countdown 泛化评估流程。"
-  thumbnail: /projects/game24-grpo.svg
-  thumbnailAlt: "24 点算式与 SFT 到 GRPO 训练流程示意图"
+- name: gen-rsi
+  title: "Gen-RSI：视频生成模型的递归自改进"
+  kind: "研究工作"
+  description: "将生成视频转化为可执行的 Blender 代理，通过物理仿真修正代理，再以渲染结果引导教师模型，训练视频生成器以改进物理一致性。"
+  thumbnail: /projects/gen-rsi.svg
+  thumbnailAlt: "Gen-RSI 视频、世界代理与物理仿真反馈的概念示意图"
   links:
-    - label: GitHub
-      url: https://github.com/memoryoffish/nlp_grpo
+    - label: 论文 · OpenReview
+      url: https://openreview.net/forum?id=noC2O6ZFgM
+    - label: 项目页
+      url: https://gen-rsi.vmv.re/

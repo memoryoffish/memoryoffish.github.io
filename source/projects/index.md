@@ -2,7 +2,7 @@
 title: 项目
 layout: page
 permalink: projects/
-description: 视频生成与强化学习相关的公开项目。
+description: ATAS、ReCA 与 Gen-RSI 等视频生成研究工作。
 cover: /projects/reca.svg
 count: false
 comments: false
@@ -33,12 +33,14 @@ ATAS 使用持久世界状态组织多镜头视频生成：场景记忆记录共
 
 [论文](https://arxiv.org/abs/2605.26525) · [项目页](https://reca.vmv.re/) · [展示仓库](https://github.com/memoryoffish/ReCA)
 
-## 用 GRPO 训练模型解 24 点
+## Gen-RSI：视频生成模型的递归自改进
 
-![24 点算式与 SFT 到 GRPO 训练流程示意图](/projects/game24-grpo.svg)
+*Gen-RSI: Recursive Self-Improvement of Video Generators through World Proxies*
 
-**强化学习 · 课程项目**
+![Gen-RSI 视频、世界代理与物理仿真反馈的概念示意图](/projects/gen-rsi.svg)
 
-基于 veRL 与 Qwen2.5-1.5B-Instruct，整理 24 点任务的数据准备、SFT 冷启动、GRPO 训练和 Countdown 泛化评估流程。
+Gen-RSI 将生成视频转化为可执行的 Blender 代理，通过物理仿真修正代理，再用渲染结果引导教师模型，在学生自身的去噪状态上训练视频生成器，以改进物理一致性。
 
-[GitHub](https://github.com/memoryoffish/nlp_grpo)
+我参与后训练实现与实验。
+
+[论文 · OpenReview](https://openreview.net/forum?id=noC2O6ZFgM) · [项目页面](https://gen-rsi.vmv.re/)
