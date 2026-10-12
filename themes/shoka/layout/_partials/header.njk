@@ -1,0 +1,13 @@
+<nav id="nav" class="show" aria-label="主导航">
+  <div class="inner">
+    <div class="toggle"><button id="sidebar-toggle" type="button" aria-label="打开侧栏" aria-controls="sidebar" aria-expanded="false">☰</button></div>
+    <ul class="menu">
+      <li class="item title"><a href="{{ config.root }}" rel="start">{{ alternate or title }}</a></li>
+      {{ partial('_partials/sidebar/menu.njk', {}, {cache: true}) }}
+    </ul>
+    <ul class="right">
+      <li class="item theme"><button id="theme-toggle" type="button" aria-label="切换深浅配色" title="切换深浅配色">◐</button></li>
+      <li class="item search"><a href="{{ url_for('/search/') }}" aria-label="搜索文章" title="搜索文章"><svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><circle cx="10" cy="10" r="6" fill="none" stroke="currentColor" stroke-width="2"/><path d="m15 15 6 6" fill="none" stroke="currentColor" stroke-width="2"/></svg></a></li>
+    </ul>
+  </div>
+</nav>

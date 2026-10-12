@@ -1,0 +1,76 @@
+{% import '_macro/sidebar.njk' as sidebar with context %}
+{% import '_macro/breadcrumb.njk' as breadcrumb with context %}
+{% import '_macro/widgets.njk' as widgets with context %}
+
+<!DOCTYPE html>
+<html lang="{{ page.language if page.language else config.language }}">
+<head>
+  {{ partial('_partials/head/head.njk', {}, {cache: true}) }}
+  {{ partial('_partials/head/head_unique.njk') }}
+  <title>{% block title %}{% endblock %}{{ title }}</title>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          {% block header %}
+            <a href="{{ config.root }}" class="logo" rel="start">
+              {%- if alternate %}<p class="artboard">{{ alternate }}</p>{%- endif %}
+              <h1 itemprop="name headline" class="title">{{ title }}</h1>
+            </a>
+            {%- if subtitle %}
+            <p class="meta" itemprop="description">= {{ subtitle }} =</p>
+            {%- endif %}
+          {% endblock %}
+          </div>
+        </div>
+        {{ partial('_partials/header.njk', {}, {cache: true}) }}
+      </div>
+      <div id="imgs">
+        <img src="{{ url_for('/static/hero.svg') }}" alt="" width="1600" height="900" fetchpriority="high">
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          {% block content %}{% endblock %}
+        </div>
+        <div id="sidebar">
+          {% block sidebar %}{{ sidebar.render() }}{% endblock %}
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          {{ widgets.render() }}
+        </div>
+        {{ partial('_partials/footer.njk', {}, {cache: true}) }}
+      </div>
+    </footer>
+  </div>
+
+<script defer src="{{ url_for('/js/shoka-lite.js') }}"></script>
+{% if page.layout == 'search' %}<script defer src="{{ url_for('/js/search.js') }}"></script>{% endif %}
+<noscript><style>
+#theme-toggle, #sidebar-toggle { display: none; }
+@media(max-width:991px) { main > .inner { display:block; } #sidebar { display:block; position:static; width:100%; } #sidebar>.inner { width:100%; } }
+</style></noscript>
+</body>
+</html>

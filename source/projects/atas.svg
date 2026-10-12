@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img" aria-labelledby="title desc">
+  <title id="title">ATAS 场景与事件记忆</title>
+  <desc id="desc">左侧场景坐标与右侧事件时间线，共同连接到持久世界状态。</desc>
+  <rect width="720" height="420" rx="18" fill="#e6f0f1"/>
+  <g fill="#f8fbfa" stroke="#588c8b" stroke-width="3"><rect x="48" y="55" width="284" height="205" rx="14"/><rect x="388" y="55" width="284" height="205" rx="14"/></g>
+  <g fill="none" stroke="#b3cecb" stroke-width="2"><path d="M72 214l112-66 120 66-112 30zM110 192l120 30M148 170l120 30M111 236l112-66M150 248l112-66"/></g>
+  <g fill="#b4d2cb" stroke="#588c8b" stroke-width="3"><path d="M131 146l45-25 46 25-46 27z"/><path d="M131 146v42l45 27v-42z"/><path d="M176 173l46-27v42l-46 27z"/></g>
+  <path d="M422 179h216" stroke="#588c8b" stroke-width="4"/>
+  <g fill="#dfae83" stroke="#a57957" stroke-width="3"><circle cx="444" cy="179" r="15"/><circle cx="530" cy="179" r="15"/><circle cx="616" cy="179" r="15"/></g>
+  <path d="M190 278v39h340v-39M360 317v30" fill="none" stroke="#588c8b" stroke-width="4"/>
+  <g fill="#355b5b" font-family="system-ui,sans-serif" font-size="22" font-weight="650" text-anchor="middle"><text x="190" y="97">SCENE MEMORY</text><text x="530" y="97">EVENT MEMORY</text><text x="360" y="383">WORLD STATE</text></g>
+</svg>

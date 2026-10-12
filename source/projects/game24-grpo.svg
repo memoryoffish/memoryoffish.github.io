@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img" aria-labelledby="title desc">
+  <title id="title">24 点 GRPO 训练</title>
+  <desc id="desc">数字卡片、有效算式和 SFT 到 GRPO 的训练流程示意图。</desc>
+  <rect width="720" height="420" rx="18" fill="#e7eee8"/>
+  <g fill="#fffaf0" stroke="#5c705d" stroke-width="3">
+    <rect x="62" y="62" width="92" height="108" rx="12"/><rect x="174" y="62" width="92" height="108" rx="12"/><rect x="286" y="62" width="92" height="108" rx="12"/><rect x="398" y="62" width="92" height="108" rx="12"/>
+  </g>
+  <g fill="#304d3b" font-family="ui-monospace, monospace" font-size="48" font-weight="700" text-anchor="middle"><text x="108" y="130">4</text><text x="220" y="130">8</text><text x="332" y="130">11</text><text x="444" y="130">11</text></g>
+  <path d="M108 208v46M220 208v46M332 208v46M444 208v46" stroke="#5c705d" stroke-width="3"/>
+  <rect x="86" y="254" width="390" height="68" rx="12" fill="#c9d8c9"/>
+  <text x="281" y="297" fill="#304d3b" font-family="ui-monospace, monospace" font-size="30" font-weight="700" text-anchor="middle">8 / 4 + 11 + 11 = 24</text>
+  <rect x="532" y="100" width="128" height="70" rx="12" fill="#c9d8c9"/>
+  <path d="M596 185v44m-12-12 12 12 12-12" fill="none" stroke="#5c705d" stroke-width="4"/>
+  <rect x="532" y="246" width="128" height="70" rx="12" fill="#c96b4b"/>
+  <g font-family="system-ui, sans-serif" font-size="25" font-weight="650" text-anchor="middle"><text x="596" y="145" fill="#304d3b">SFT</text><text x="596" y="292" fill="#fffaf0">GRPO</text></g>
+</svg>

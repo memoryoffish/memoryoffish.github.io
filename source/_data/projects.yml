@@ -1,0 +1,33 @@
+- name: atas
+  title: "ATAS：以世界状态为中心的智能体视频生成"
+  kind: "研究工作 · 共同第一作者"
+  description: "通过持久的场景记忆与事件记忆支持多镜头视频生成，在返回旧场景或重现历史事件时检索相关状态，并经验证后更新记忆。"
+  thumbnail: /projects/atas.svg
+  thumbnailAlt: "ATAS 场景记忆与事件记忆的概念示意图"
+  links:
+    - label: 项目页
+      url: https://memoryoffish.github.io/atas_demo/
+
+- name: reca
+  title: "ReCA：通过递归上下文分配实现多镜头长视频外推"
+  kind: "预印本 · 2026"
+  description: "在有限的短视频生成预算下，递归组织镜头规划、上下文分配与状态更新，将已有画面延续为多镜头长视频。"
+  thumbnail: /projects/reca.svg
+  thumbnailAlt: "多镜头视频时间线与上下文节点示意图"
+  links:
+    - label: 论文
+      url: https://arxiv.org/abs/2605.26525
+    - label: 项目页
+      url: https://reca.vmv.re/
+    - label: 展示仓库
+      url: https://github.com/memoryoffish/ReCA
+
+- name: game24-grpo
+  title: "用 GRPO 训练模型解 24 点"
+  kind: "强化学习 · 课程项目"
+  description: "基于 veRL 与 Qwen2.5-1.5B-Instruct，整理 24 点任务的数据准备、SFT 冷启动、GRPO 训练和 Countdown 泛化评估流程。"
+  thumbnail: /projects/game24-grpo.svg
+  thumbnailAlt: "24 点算式与 SFT 到 GRPO 训练流程示意图"
+  links:
+    - label: GitHub
+      url: https://github.com/memoryoffish/nlp_grpo

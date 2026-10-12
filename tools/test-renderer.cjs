@@ -1,0 +1,17 @@
+'use strict';
+const assert = require('node:assert/strict');
+const renderers = {};
+global.hexo = { extend: { renderer: { register(name, output, render) { renderers[name] = render; } } } };
+require('../scripts/markdown.js');
+delete global.hexo;
+const render = text => renderers.md({ text });
+assert.match(render('Inline \\(x^2 + 1\\).'), /<math/);
+assert.match(render('$$\nx^2 + 1\n$$'), /display="block"/);
+assert.match(render('\\[x + 1\\]'), /display="block"/);
+const code = render('`$s1` and `$sp`\n\n```asm\nadd $s1, $s2, $s3\n```');
+assert.equal((code.match(/<math/g) || []).length, 0);
+assert.match(code, /\$s1/);
+assert.match(render('## 同名 {id="旧链接"}'), /id="旧链接"/);
+assert.throws(() => render('\\(\\unsupportedcommand{x}\\)'));
+assert.throws(() => render('$$\nx + 1'));
+console.log('PASS: inline/block MathML, literal registers, heading IDs, and fail-closed invalid math.');

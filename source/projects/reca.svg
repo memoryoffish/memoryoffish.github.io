@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" role="img" aria-labelledby="title desc">
+  <title id="title">ReCA 多镜头时间线</title>
+  <desc id="desc">三条上下文轨道连接到多镜头时间线。</desc>
+  <rect width="720" height="420" rx="18" fill="#f3ead8"/>
+  <path d="M66 286h570" stroke="#8b6650" stroke-width="4"/>
+  <path d="M112 286v-78M278 286v-116M444 286v-62M610 286v-134" stroke="#b68d6f" stroke-width="3"/>
+  <g fill="#c96b4b" stroke="#70493b" stroke-width="3">
+    <rect x="72" y="286" width="80" height="56" rx="8"/><rect x="238" y="286" width="80" height="56" rx="8"/>
+    <rect x="404" y="286" width="80" height="56" rx="8"/><rect x="570" y="286" width="80" height="56" rx="8"/>
+  </g>
+  <g fill="none" stroke="#6d7c57" stroke-width="5" stroke-linecap="round">
+    <path d="M112 208C174 126 220 126 278 170"/><path d="M278 170C340 74 382 74 444 224"/><path d="M444 224C504 144 548 144 610 152"/>
+  </g>
+  <g fill="#6d7c57"><circle cx="112" cy="208" r="9"/><circle cx="278" cy="170" r="9"/><circle cx="444" cy="224" r="9"/><circle cx="610" cy="152" r="9"/></g>
+  <g fill="#70493b" font-family="system-ui, sans-serif" font-size="18" font-weight="650"><text x="78" y="376">PLAN</text><text x="242" y="376">ALLOCATE</text><text x="418" y="376">RENDER</text><text x="578" y="376">REFRESH</text></g>
+</svg>

@@ -1,0 +1,14 @@
+{% macro render(display_toc) %}
+<div class="inner">
+  <div class="panels"><div class="inner">
+    {% if display_toc %}
+    {% set article_toc = toc(page.content) %}
+    {% if article_toc.length > 1 %}
+    <details class="sidebar-toc" open><summary>文章目录</summary><div class="contents panel">{{ article_toc }}</div></details>
+    {% endif %}
+    {% endif %}
+    <div class="overview panel">{{ partial('_partials/sidebar/overview.njk', {}, {cache: true}) }}</div>
+  </div></div>
+  <ul id="quick"><li><a href="#header" aria-label="回到页首">↑</a></li><li><a href="#footer" aria-label="转到页尾">↓</a></li></ul>
+</div>
+{% endmacro %}

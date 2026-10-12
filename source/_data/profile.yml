@@ -1,0 +1,16 @@
+name: 李业
+english_name: Ye Li
+handle: memoryoffish
+education: 浙江大学 · 软件工程本科生
+research: 世界模型 · 视频生成 · 多模态交错生成
+intro: 浙江大学软件工程本科生，关注世界模型、视频生成与多模态交错生成。
+paragraphs:
+  - 我是李业，浙江大学软件工程专业本科生，关注世界模型、视频生成与多模态交错生成。我的研究兴趣包括长视频生成中的上下文调度、跨镜头状态保持，以及物理知识在视频生成中的应用。
+  - 近期参与的工作包括 ATAS、ReCA 和 Gen-RSI，其中 ATAS 为共同第一作者。这里记录我的研究进展、论文阅读与工程实践，也分享学习过程中遇到的问题和思考。
+links:
+  - label: GitHub
+    url: https://github.com/memoryoffish
+  - label: 邮箱
+    url: mailto:3230102276@zju.edu.cn
+  - label: RSS
+    url: /atom.xml

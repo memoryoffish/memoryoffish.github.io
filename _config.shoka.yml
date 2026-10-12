@@ -1,0 +1,48 @@
+alternate: 李业
+statics: /
+darkmode: false
+auto_scroll: false
+audio: false
+loader:
+  start: false
+  switch: false
+fireworks:
+  enable: false
+font:
+  enable: false
+menu:
+  home: / || home
+  projects: /projects/ || feather
+  archives: /archives/ || list-alt
+  tags: /tags/ || tags
+  search: /search/ || search
+  about: /about/ || user
+social:
+  github: https://github.com/memoryoffish || github
+  email: mailto:3230102276@zju.edu.cn || envelope
+sidebar:
+  position: left
+  avatar: memoryoffish-avatar.jpg
+widgets:
+  random_posts: false
+  recent_comments: false
+footer:
+  since: 2024
+  count: false
+  powered: true
+  icon:
+    name: fish
+    color: '#e9546b'
+post:
+  count: false
+reward:
+  enable: false
+valine:
+  appId: ""
+  appKey: ""
+  visitor: false
+  powerMode: false
+image_server: ""
+pangu: false
+exturl: false
+baidu_push: false

@@ -1,0 +1,56 @@
+title: 李业的个人主页
+subtitle: 浙江大学 · 软件工程
+description: 浙江大学软件工程本科生，关注世界模型、视频生成与多模态交错生成。
+keywords: 计算机,研究,开发
+author: 李业
+language: zh-CN
+timezone: Asia/Singapore
+url: https://memoryoffish.github.io
+root: /
+permalink: :year/:month/:day/:title/
+pretty_urls:
+  trailing_index: false
+  trailing_html: false
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+skip_render:
+  - pdfs/**
+  - images/**
+  - static/**
+  - projects/*.svg
+new_post_name: :title.md
+default_layout: post
+external_link:
+  enable: true
+  field: site
+post_asset_folder: false
+relative_link: false
+future: false
+render_drafts: false
+syntax_highlighter: ""
+highlight:
+  enable: false
+prismjs:
+  enable: false
+date_format: YYYY-MM-DD
+time_format: HH:mm
+updated_option: date
+per_page: 10
+pagination_dir: page
+theme: shoka
+autoprefixer:
+  exclude: ['*.min.css']
+feed:
+  enable: true
+  type: [atom, rss2]
+  path: [atom.xml, rss.xml]
+  limit: 20
+  order_by: -date
+  content: true
+  autodiscovery: false
+
+stylus:
+  compress: true

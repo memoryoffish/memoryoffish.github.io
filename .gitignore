@@ -1,0 +1,17 @@
+/.tools/
+/.cache/
+/public/
+/resources/
+/.hugo_build.lock
+.DS_Store
+__pycache__/
+*.pyc
+
+/node_modules/
+/db.json
+/debug.log
+
+# Machine-specific agent guidance stays local.
+/CLAUDE.md
+/.agents/skills/project-knowledge-pack/
+/docs/history/
