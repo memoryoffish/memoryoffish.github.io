@@ -1,10 +1,10 @@
 /* Keep Shoka's layout and palette; content is visible before JavaScript runs. */
-.home-profile-hero { padding: 0 1.2rem; max-width: 900px; margin: auto; }
-#brand .profile-name { font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1.35; }
-.profile-author { margin-top: .7rem; font-size: 1.1rem; line-height: 1.6; }
+.home-profile-hero { display: flex; flex-direction: column; align-items: center; gap: .35rem; width: min(100%, 52rem); max-width: none; padding: 0 1.2rem; margin: auto; }
+#brand .profile-name { margin: 0; font-size: clamp(2.4rem, 5vw, 3.4rem); line-height: 1.15; }
+.profile-author { margin: 0; font-size: 1.1rem; line-height: 1.55; }
 .profile-author span { display: inline-block; margin-left: .6em; font-size: .9em; }
-#brand .home-profile-hero .meta { margin-top: 1rem; font-size: 1.05rem; line-height: 1.7; }
-.profile-research { margin-top: .6rem; font-size: .95rem; line-height: 1.8; }
+#brand .home-profile-hero .meta { margin: 0; font-size: 1.05rem; line-height: 1.55; }
+.profile-research { margin: 0; font-size: .95rem; line-height: 1.55; }
 .bio-copy { padding: .2rem 1.5rem 1.5rem; font-size: 1rem; line-height: 1.95; }
 .bio-preview .divider { color: var(--text-color); }
 .bio-copy p { margin: 1rem 0; }
@@ -95,7 +95,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, summary:focus-visibl
   .panels { padding-top: 1rem; }
 }
 @media (max-width:767px) {
-  #header { height: 48vh; min-height: 300px; max-height: 440px; }
+  #header { height: 44vh; min-height: 280px; max-height: 400px; }
   #brand .artboard { font-size: 2.6rem; }
   #main .wrap { padding: 1rem .75rem; }
   .post.block { padding: 0 .5rem; }
