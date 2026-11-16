@@ -28,14 +28,30 @@
     </section>
     {% endif %}
 
+    {% if page.current == 1 and site.data.news %}
+    <section class="news-preview" aria-labelledby="news-title">
+      <h2 class="divider" id="news-title">动态</h2>
+      <ul class="news-list">
+      {% for item in site.data.news %}
+        <li{% if item.hot %} class="hot"{% endif %}><time>{{ item.date }}</time><span>{{ item.text }}</span></li>
+      {% endfor %}
+      </ul>
+    </section>
+    {% endif %}
+
     {% if page.current == 1 and site.data.projects %}
     <section class="project-preview" aria-labelledby="projects-title">
-      <h2 class="divider" id="projects-title"><a href="{{ url_for('/projects/') }}">项目</a></h2>
+      <h2 class="divider" id="projects-title"><a href="{{ url_for('/projects/') }}">研究项目</a></h2>
       <div class="project-preview-list">
       {% for project in site.data.projects %}
         <article>
-          {% if project.thumbnail %}<img src="{{ url_for(project.thumbnail) }}" alt="{{ project.thumbnailAlt }}" width="160" height="100" loading="lazy">{% endif %}
-          <div><h3>{{ project.title or project.name }}</h3>{% if project.kind %}<p class="project-meta"><strong>{{ project.kind }}</strong></p>{% endif %}<p>{{ project.description }}</p>
+          {% if project.thumbnail %}<img class="project-thumb" src="{{ url_for(project.thumbnail) }}" alt="{{ project.thumbnailAlt }}" width="480" height="270" loading="lazy">{% endif %}
+          <div>
+            <p class="project-venue"><span>{{ project.venue }}</span>{% if project.role %}<span class="tag">{{ project.role }}</span>{% endif %}{% if project.highlight %}<a class="tag hot" href="{{ project.highlight.url }}">{{ project.highlight.label }}</a>{% endif %}</p>
+            <h3><a href="{{ url_for('/projects/') }}#{{ project.name }}">{{ project.title }}</a></h3>
+            {% if project.subtitle %}<p class="project-subtitle">{{ project.subtitle }}</p>{% endif %}
+            {% if project.authors %}<p class="project-authors">{% for a in project.authors %}{% if a.indexOf('Ye Li') == 0 %}<strong>{{ a }}</strong>{% else %}{{ a }}{% endif %}{% if not loop.last %}, {% endif %}{% endfor %}</p>{% endif %}
+            <p>{{ project.description }}</p>
             {% if project.links %}<ul>{% for link in project.links %}<li><a href="{{ link.url }}">{{ link.label }}</a></li>{% endfor %}</ul>{% endif %}
           </div>
         </article>

@@ -1,21 +1,45 @@
 - name: atas
-  title: "ATAS：以世界状态为中心的智能体视频生成"
-  kind: "研究工作 · 共同第一作者"
-  description: "通过持久的场景记忆与事件记忆支持多镜头视频生成，在返回旧场景或重现历史事件时检索相关状态，并经验证后更新记忆。"
-  thumbnail: /projects/atas.svg
-  thumbnailAlt: "ATAS 场景记忆与事件记忆的概念示意图"
+  short: ATAS
+  title: "Any Time, Any Space: A World-State-Centric Framework for Agentic Video Generation"
+  subtitle: "以世界状态为中心的智能体视频生成"
+  authors: ["Weijie Wang*", "Haomin Zhang*", "Ye Li*", "Akide Liu", "Zeyu Zhang", "Haoyu Zhao", "Yefei He", "Donny Y. Chen", "Feng Chen", "Bohan Zhuang†"]
+  venue: "arXiv 2026 · ICLR 2027 在审"
+  role: "共同第一作者"
+  highlight:
+    label: "Hugging Face Daily Papers 当日第 2"
+    url: https://huggingface.co/papers/date/2026-10-15
+  description: "为多镜头视频生成维护场景记忆与事件记忆：回到旧场景、换机位重放旧事件时，先取出相关状态作为条件，生成后经检查再写回。在四个视频生成器上提升了全部跨镜头一致性指标，人工评测六项第一。"
+  thumbnail: /projects/atas-thumb.webp
+  thumbnailAlt: "ATAS 生成短片中的一个镜头：客厅沙发上端着杯子的男人"
   links:
+    - label: arXiv
+      url: https://arxiv.org/abs/2610.20571
     - label: 项目页
-      url: https://memoryoffish.github.io/atas_demo/
+      url: https://lhmd.top/atas/
+    - label: 代码
+      url: https://github.com/ziplab/ATAS
+    - label: Hugging Face
+      url: https://huggingface.co/papers/2610.20571
+
+- name: unirlm
+  short: UniRLM
+  title: "UniRLM: Recursive Unified State Modeling for Interleaved Generation"
+  subtitle: "面向图文交错生成的递归统一状态建模"
+  venue: "AAAI 2027 在审"
+  role: "共同第一作者"
+  description: "长篇图文交错生成越往后越崩，症结在图像生成只在一两张图的短上下文上训练过。UniRLM 免训练地把长上下文轨迹拆成子任务 DAG：每次调用只带入直接依赖的图像，校验通过才写回，独立节点并行执行。"
 
 - name: reca
-  title: "ReCA：通过递归上下文分配实现多镜头长视频外推"
-  kind: "预印本 · 2026"
-  description: "在有限的短视频生成预算下，递归组织镜头规划、上下文分配与状态更新，将已有画面延续为多镜头长视频。"
-  thumbnail: /projects/reca.svg
-  thumbnailAlt: "多镜头视频时间线与上下文节点示意图"
+  short: ReCA
+  title: "ReCA: Multi-Shot Long Video Extrapolation via Recursive Context Allocation"
+  subtitle: "通过递归上下文分配实现多镜头长视频外推"
+  authors: ["Akide Liu", "Jinbo Xing", "Chaojie Mao", "Ye Li", "Zeyu Zhang", "Yefei He", "Weijie Wang", "Zihan Wang", "Yu Liu", "Gholamreza Haffari", "Bohan Zhuang"]
+  venue: "arXiv 2026 · 预印本"
+  description: "把一帧画面续写成几分钟、有镜头结构的长视频。ReCA 认为瓶颈在上下文分配而非长度：递归拆成上下文有界的子问题，只在叶子节点调用短视频模型，多镜头一致性指标提升 28–43%。"
+  thumbnail: /projects/reca-thumb.webp
+  thumbnailAlt: "ReCA 展示视频中的一帧：航拍悉尼歌剧院与海港大桥"
   links:
-    - label: 论文
+    - label: arXiv
       url: https://arxiv.org/abs/2605.26525
     - label: 项目页
       url: https://reca.vmv.re/
@@ -23,13 +47,15 @@
       url: https://github.com/memoryoffish/ReCA
 
 - name: gen-rsi
-  title: "Gen-RSI：视频生成模型的递归自改进"
-  kind: "研究工作"
-  description: "将生成视频转化为可执行的 Blender 代理，通过物理仿真修正代理，再以渲染结果引导教师模型，训练视频生成器以改进物理一致性。"
-  thumbnail: /projects/gen-rsi.svg
-  thumbnailAlt: "Gen-RSI 视频、世界代理与物理仿真反馈的概念示意图"
+  short: Gen-RSI
+  title: "Gen-RSI: Recursive Self-Improvement of Video Generators through World Proxies"
+  subtitle: "借助世界代理实现视频生成模型的递归自改进"
+  venue: "ICLR 2027 在审"
+  description: "把生成的视频重建为可执行的 Blender 代理，用物理仿真修正后渲染出来，再在学生模型自己的去噪状态上蒸馏回视频生成器，逐轮改进物理一致性。"
+  thumbnail: /projects/gen-rsi-thumb.webp
+  thumbnailAlt: "Gen-RSI 论文方法图中的三帧：机械臂把红色方块叠到蓝色方块上"
   links:
-    - label: 论文 · OpenReview
+    - label: OpenReview
       url: https://openreview.net/forum?id=noC2O6ZFgM
     - label: 项目页
       url: https://gen-rsi.vmv.re/
