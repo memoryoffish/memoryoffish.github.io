@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex">
+<title>加载中…</title></head>
+<body><p id="msg" style="font:16px system-ui;margin:2em">加载中…</p>
+<script>
+(async () => {
+  const BUCKET = "https://memoryoffishself-1533811452.cos.ap-shanghai.myqcloud.com/";
+  const msg = (t) => { document.getElementById("msg").textContent = t; document.title = t; };
+  let src = "";
+  try { src = decodeURIComponent(location.hash.slice(1)); } catch (e) {}
+  if (!src.startsWith(BUCKET)) { msg("链接无效"); return; }
+  let r;
+  try { r = await fetch(src, { credentials: "omit", referrerPolicy: "no-referrer" }); }
+  catch (e) { msg("加载失败：网络错误"); return; }
+  if (r.status === 403) { msg("链接已过期或无权访问"); return; }
+  if (!r.ok) { msg("加载失败：HTTP " + r.status); return; }
+  const html = await r.text();
+  document.open(); document.write(html); document.close();
+})();
+</script></body></html>

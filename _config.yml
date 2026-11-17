@@ -21,6 +21,7 @@ skip_render:
   - images/**
   - static/**
   - projects/*.svg
+  - view/**
 new_post_name: :title.md
 default_layout: post
 external_link:
