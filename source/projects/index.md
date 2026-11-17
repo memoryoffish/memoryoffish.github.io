@@ -3,23 +3,20 @@ title: 研究项目
 layout: page
 permalink: projects/
 description: ATAS、UniRLM、ReCA 与 Gen-RSI：视频生成中的世界状态、图文交错生成、长视频上下文分配与物理一致性。
-cover: /projects/atas-thumb.webp
 count: false
 comments: false
 audio: false
 ---
 
+\* 表示共同第一作者；† 表示通讯作者 {.pub-legend}
+
 ## ATAS：以世界状态为中心的智能体视频生成 {#atas}
 
-**Any Time, Any Space: A World-State-Centric Framework for Agentic Video Generation**
+**Any Time, Any Space: A World-State-Centric Framework for Agentic Video Generation** *ICLR 2027 在审*{.pub-venue} {.pub-title}
 
-Weijie Wang\*, Haomin Zhang\*, **Ye Li\***, Akide Liu, Zeyu Zhang, Haoyu Zhao, Yefei He, Donny Y. Chen, Feng Chen, Bohan Zhuang† {.paper-meta}
+Weijie Wang\*, Haomin Zhang\*, **Ye Li\***, Akide Liu, Zeyu Zhang, Haoyu Zhao, Yefei He, Donny Y. Chen, Feng Chen, and Bohan Zhuang† {.pub-authors}
 
-arXiv 2026 · ICLR 2027 在审 · \* 共同第一作者，† 通讯作者 {.paper-meta}
-
-[Hugging Face Daily Papers 当日第 2（2026-10-15）](https://huggingface.co/papers/date/2026-10-15){.paper-badge}
-
-[arXiv](https://arxiv.org/abs/2610.20571) · [项目页](https://lhmd.top/atas/) · [代码](https://github.com/ziplab/ATAS) · [Hugging Face](https://huggingface.co/papers/2610.20571)
+&#91;[arXiv](https://arxiv.org/abs/2610.20571)&#93; &#91;[代码](https://github.com/ziplab/ATAS)&#93; &#91;[项目页](https://lhmd.top/atas/)&#93; &#91;[Hugging Face 当日论文第 2](https://huggingface.co/papers/2610.20571){.hot}&#93; {.pub-links}
 
 ![ATAS 方法总图：世界状态编译、视频生成与校验、场景记忆与事件记忆两段式记忆](/projects/atas-method.webp){width=1600 height=368 loading=lazy}
 
@@ -30,9 +27,9 @@ arXiv 2026 · ICLR 2027 在审 · \* 共同第一作者，† 通讯作者 {.pap
 
 ## UniRLM：面向图文交错生成的递归统一状态建模 {#unirlm}
 
-**UniRLM: Recursive Unified State Modeling for Interleaved Generation**
+**UniRLM: Recursive Unified State Modeling for Interleaved Generation** *AAAI 2027 在审*{.pub-venue} {.pub-title}
 
-AAAI 2027 在审 · 共同第一作者 {.paper-meta}
+Ye Li 为共同第一作者；双盲审稿中，作者列表暂不公开 {.pub-authors .pub-last}
 
 - **问题**：统一多模态模型已经能生成图文交错的长篇内容，但序列一长质量就崩。我们发现崩的是图像生成：同一个模型里，文本生成在长篇交错语料上训练，图像生成几乎只见过一两张图，它能用好的上下文远小于模型的上下文窗口；再往里加中间推理只会让差距更大。
 - **做法**：UniRLM 不训练模型，而是把一条长上下文轨迹改写成基于显式多模态状态的短上下文调用：自顶向下把任务拆成子任务 DAG，每次调用只带入该节点的直接依赖，校验通过才写回、失败则回滚，互不依赖的节点并行执行。这样每次图像生成都只看到它真正依赖的图，且格式与训练时一致。
@@ -40,13 +37,11 @@ AAAI 2027 在审 · 共同第一作者 {.paper-meta}
 
 ## ReCA：通过递归上下文分配实现多镜头长视频外推 {#reca}
 
-**ReCA: Multi-Shot Long Video Extrapolation via Recursive Context Allocation**
+**ReCA: Multi-Shot Long Video Extrapolation via Recursive Context Allocation** *arXiv 2026*{.pub-venue} {.pub-title}
 
-Akide Liu, Jinbo Xing, Chaojie Mao, **Ye Li**, Zeyu Zhang, Yefei He, Weijie Wang, Zihan Wang, Yu Liu, Gholamreza Haffari, Bohan Zhuang {.paper-meta}
+Akide Liu, Jinbo Xing, Chaojie Mao, **Ye Li**, Zeyu Zhang, Yefei He, Weijie Wang, Zihan Wang, Yu Liu, Gholamreza Haffari, and Bohan Zhuang {.pub-authors}
 
-arXiv 2026 · 预印本 {.paper-meta}
-
-[arXiv](https://arxiv.org/abs/2605.26525) · [项目页](https://reca.vmv.re/) · [展示仓库](https://github.com/memoryoffish/ReCA)
+&#91;[arXiv](https://arxiv.org/abs/2605.26525)&#93; &#91;[项目页](https://reca.vmv.re/)&#93; &#91;[展示仓库](https://github.com/memoryoffish/ReCA)&#93; {.pub-links}
 
 ![ReCA 方法总图：递归规划、叶子节点执行、并行与顺序执行逻辑、自适应状态更新](/projects/reca-method.webp){width=1600 height=874 loading=lazy}
 
@@ -58,11 +53,11 @@ arXiv 2026 · 预印本 {.paper-meta}
 
 ## Gen-RSI：借助世界代理实现视频生成模型的递归自改进 {#gen-rsi}
 
-**Gen-RSI: Recursive Self-Improvement of Video Generators through World Proxies**
+**Gen-RSI: Recursive Self-Improvement of Video Generators through World Proxies** *ICLR 2027 在审*{.pub-venue} {.pub-title}
 
-ICLR 2027 在审 {.paper-meta}
+Ye Li 为学生二作；双盲审稿中，作者列表暂不公开 {.pub-authors}
 
-[OpenReview](https://openreview.net/forum?id=noC2O6ZFgM) · [项目页](https://gen-rsi.vmv.re/)
+&#91;[OpenReview](https://openreview.net/forum?id=noC2O6ZFgM)&#93; &#91;[项目页](https://gen-rsi.vmv.re/)&#93; {.pub-links}
 
 ![Gen-RSI 方法总图：基于 Blender 的世界知识、在学生访问状态上的 on-policy 蒸馏、蒸馏后的推理](/projects/gen-rsi-method.webp){width=1600 height=775 loading=lazy}
 

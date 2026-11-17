@@ -23,7 +23,6 @@ class Page(HTMLParser):
         self.math = 0
         self.unresolved_images = 0
         self.encoded_links = 0
-        self.lazy_images = set()
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
@@ -37,8 +36,6 @@ class Page(HTMLParser):
             self.links.append(attrs['href'])
         if tag in ('script', 'img', 'iframe', 'source', 'video') and attrs.get('src'):
             self.resources.append(attrs['src'])
-            if tag == 'img' and attrs.get('loading') == 'lazy':
-                self.lazy_images.add(attrs['src'])
         if tag == 'link' and set(attrs.get('rel', '').split()) & {'stylesheet', 'icon', 'preload', 'apple-touch-icon', 'mask-icon'}:
             self.resources.append(attrs.get('href', ''))
 
@@ -118,25 +115,18 @@ def main():
     if not any(item.get('url') == '/about/' for item in index):
         errors.append('Personal introduction missing from search index')
     initial = {PUBLIC / 'index.html'}
-    lazy = set()
     for url in home.resources:
         target = local_target(url, PUBLIC / 'index.html')
         if target and target.is_file():
-            (lazy if url in home.lazy_images else initial).add(target)
-    lazy -= initial
+            initial.add(target)
     bytes_raw = sum(p.stat().st_size for p in initial)
     bytes_gzip = sum(len(gzip.compress(p.read_bytes())) for p in initial)
     if bytes_gzip > 80_000:
         errors.append(f'Initial HTML/CSS/icons exceed 80 kB gzip budget: {bytes_gzip}')
-    # Lazy-loaded project thumbnails are already-compressed images; budget them separately.
-    lazy_bytes = sum(p.stat().st_size for p in lazy)
-    if lazy_bytes > 60_000:
-        errors.append(f'Home lazy-loaded images exceed 60 kB budget: {lazy_bytes}')
     if errors:
         raise SystemExit('\n'.join(errors))
     print(f'PASS: {len(pages)} HTML pages; Gen-RSI links; withdrawn course content absent; search; local assets; no audio.')
     print(f'Home resource files: {len(initial)}, {bytes_raw:,} bytes raw, {bytes_gzip:,} bytes gzip estimate.')
-    print(f'Home lazy-loaded images: {len(lazy)}, {lazy_bytes:,} bytes.')
     print('Browser behavior, actual transfer sizes, mobile layout and deployed latency require separate verification.')
 
 
