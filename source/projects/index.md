@@ -4,6 +4,7 @@ layout: page
 permalink: projects/
 description: ATAS、UniRLM、ReCA 与 Gen-RSI：视频生成中的世界状态、图文交错生成、长视频上下文分配与物理一致性。
 count: false
+nosidebar: true
 comments: false
 audio: false
 ---

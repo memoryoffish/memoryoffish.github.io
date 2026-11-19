@@ -31,3 +31,15 @@
     pre.appendChild(button);
   });
 })();
+// Promo card under the introduction: the video is created only when clicked (nothing loads before that).
+document.querySelectorAll('.promo-card button').forEach((button) => {
+  button.addEventListener('click', () => {
+    const card = button.parentElement;
+    const video = document.createElement('video');
+    video.src = card.dataset.src;
+    video.controls = true;
+    video.playsInline = true;
+    card.replaceChildren(video);
+    video.play().catch(() => {});
+  });
+});

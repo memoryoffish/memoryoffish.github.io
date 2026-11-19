@@ -2,7 +2,7 @@
 title: 关于李业
 layout: page
 permalink: about/
-description: 浙江大学软件工程本科生，关注世界模型、视频生成与多模态交错生成。
+description: 浙江大学软件工程本科生，研究 agent 驱动的 code world model 范式。
 cover: /images/blog-cover.svg
 count: false
 comments: false
@@ -11,7 +11,7 @@ audio: false
 
 我是李业，浙江大学软件工程专业本科生，2023 年 9 月入学。
 
-我关注世界模型、视频生成与多模态交错生成，尤其是长视频生成中的上下文调度、跨镜头状态保持，以及物理知识如何用于视频生成模型。这里记录我的研究进展、论文阅读和工程实践。
+我研究 agent 驱动的 code world model 范式：由 coding agent 用代码维护持续存在的世界状态、推演事件和物理，再交给视频模型渲染成画面。我尤其关注长视频生成中的上下文调度、跨镜头状态保持，以及物理知识如何用于视频生成模型。这里记录我的研究进展、论文阅读和工程实践。
 
 ## 研究与实践
 

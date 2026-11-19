@@ -29,7 +29,7 @@
         {{ partial('_partials/header.njk', {}, {cache: true}) }}
       </div>
       <div id="imgs">
-        <img src="{{ url_for('/static/hero.svg') }}" alt="" width="1600" height="900" fetchpriority="high">
+        <img src="{{ url_for('/static/hero-film.webp') }}" alt="" width="1280" height="608" fetchpriority="high">
       </div>
     </header>
     <div id="waves">
@@ -45,14 +45,16 @@
         </g>
       </svg>
     </div>
-    <main>
+    <main{% if page.nosidebar %} class="no-sidebar"{% endif %}>
       <div class="inner">
         <div id="main" class="pjax">
           {% block content %}{% endblock %}
         </div>
+        {%- if not page.nosidebar %}
         <div id="sidebar">
           {% block sidebar %}{{ sidebar.render() }}{% endblock %}
         </div>
+        {%- endif %}
         <div class="dimmer"></div>
       </div>
     </main>

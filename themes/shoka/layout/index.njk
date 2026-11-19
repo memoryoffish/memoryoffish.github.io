@@ -20,10 +20,9 @@
       <h2 class="divider" id="bio-title">关于我</h2>
       <div class="bio-copy">
         {% for paragraph in site.data.profile.paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
-        <ul class="bio-links" aria-label="个人链接">
-          {% for link in site.data.profile.links %}<li><a href="{{ link.url }}">{{ link.label }}</a></li>{% endfor %}
-          <li><a href="{{ url_for('/about/') }}">更多关于我 →</a></li>
-        </ul>
+        <div class="promo-card" data-src="{{ url_for('/films/media/promo.mp4') }}">
+          <button type="button" aria-label="播放 38 秒宣传片"><b>Run the world, render the view.</b><span>世界在代码里一直运行，镜头只是在看它 · 宣传片 38 秒</span><i aria-hidden="true">▶</i></button>
+        </div>
       </div>
     </section>
     {% endif %}
