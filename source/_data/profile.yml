@@ -5,7 +5,7 @@ education: 浙江大学 · 软件工程本科生
 research: Agent · Code World Model · 视频生成
 intro: 浙江大学软件工程本科生，研究 agent 驱动的 code world model 范式。
 paragraphs:
-  - 我是李业，浙江大学软件工程专业 2023 级本科生，研究 agent 驱动的 code world model 范式：由 coding agent 用代码维护世界状态、推演事件和物理，再交给视频模型渲染成画面。我关心的问题是：怎样让视频生成像一个持续存在的世界那样工作——镜头切走再切回来，场景和人物还在原处；物体下落、碰撞，过程合乎物理。
+  - 我是李业，浙江大学软件工程专业 2023 级本科生，研究 agent 驱动的 code world model 范式：由 coding agent 用代码维护世界状态、推演事件和物理，再交给视频模型渲染成画面。我关心的问题是：视频生成怎样既可控、又能维持世界的状态——让谁站在哪、朝哪看、做什么，就拍成什么样；镜头切走再切回来，场景和人物还在原处；物体下落、碰撞，过程合乎物理。
   - 作为共同第一作者，我完成了 <strong>ATAS</strong>——为多镜头视频生成维护可检索的场景记忆与事件记忆，获 Hugging Face Daily Papers 当日第 2 名；以及 <strong>UniRLM</strong>——把图文交错生成的长上下文拆成只带直接依赖的短调用。作为学生二作（代码实验主力）共同完成了 <strong>ReCA</strong>（把几分钟的长视频生成看作上下文分配问题）和 <strong>Gen-RSI</strong>（借助 Blender 物理仿真修正生成结果，再蒸馏回视频生成器）。
 links:
   - label: GitHub
