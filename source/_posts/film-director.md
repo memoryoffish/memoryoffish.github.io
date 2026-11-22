@@ -93,3 +93,13 @@ proxy（白模这类代替真实场景的粗几何）是否真能达到 code wor
 
 - 仓库：<https://github.com/memoryoffish/film-director-skill-plugin>
 - 展示页：<https://memoryoffish.github.io/film-director-page/>
+
+---
+
+**宣传片里的音效。** 下面这几段录音经过剪辑、混音后用在宣传片里；其余的声音是视频模型生成的成片原声，旁白用 Qwen3-TTS（Apache-2.0）合成。
+
+- 《雨夜》：“Rain on Windows, Interior, A.wav” by InspectorJ — <https://freesound.org/people/InspectorJ/sounds/346642/> — [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- 《第一口》：“fizzing” by odilonmarcenaro — <https://freesound.org/people/odilonmarcenaro/sounds/238564/> — [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+- 《月亮掉下来了》：“Night time crickets call” by Clearwavsound — <https://freesound.org/people/Clearwavsound/sounds/523439/> — [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/)
+
+本项目与 Anthropic 无关，非 Anthropic 官方项目。Claude 是 Anthropic 的商标。
