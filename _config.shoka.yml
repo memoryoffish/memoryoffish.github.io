@@ -12,7 +12,7 @@ font:
   enable: false
 menu:
   home: / || home
-  projects: /projects/ || feather
+  projects: /#projects-title || feather
   Gallery: /films/ || th
 social:
   github: https://github.com/memoryoffish || github

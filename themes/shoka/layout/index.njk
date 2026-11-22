@@ -45,9 +45,9 @@
       <ul class="pub-list">
       {% for project in site.data.projects %}
         <li>
-          <p class="pub-title"><a href="{{ url_for('/projects/') }}#{{ project.name }}">{{ project.title }}</a> <span class="pub-venue">{{ project.venue }}</span></p>
+          <p class="pub-title"><a href="{{ url_for('/projects/' + project.name + '/') }}">{{ project.title }}</a> <span class="pub-venue">{{ project.venue }}</span></p>
           <p class="pub-authors">{% if project.authors %}{% for a in project.authors %}{% if a.indexOf('Ye Li') == 0 %}<strong>{{ a }}</strong>{% else %}{{ a }}{% endif %}{% if loop.revindex == 2 %}, and {% elif not loop.last %}, {% endif %}{% endfor %}{% else %}{{ project.authorsNote }}{% endif %}</p>
-          <p class="pub-links">{% for link in project.links %}[<a href="{{ link.url }}"{% if link.hot %} class="hot"{% endif %}>{{ link.label }}</a>] {% endfor %}[<a href="{{ url_for('/projects/') }}#{{ project.name }}">介绍</a>]</p>
+          <p class="pub-links">{% for link in project.links %}[<a href="{{ link.url }}"{% if link.hot %} class="hot"{% endif %}>{{ link.label }}</a>] {% endfor %}[<a href="{{ url_for('/projects/' + project.name + '/') }}">介绍</a>]</p>
         </li>
       {% endfor %}
       </ul>
