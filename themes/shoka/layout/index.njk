@@ -40,7 +40,7 @@
 
     {% if page.current == 1 and site.data.projects %}
     <section class="pub-preview" aria-labelledby="projects-title">
-      <h2 class="divider" id="projects-title"><a href="{{ url_for('/projects/') }}">研究项目</a></h2>
+      <h2 class="divider" id="projects-title"><a href="{{ url_for('/projects/') }}">论文</a></h2>
       <p class="pub-legend">* 表示共同第一作者；† 表示通讯作者</p>
       <ul class="pub-list">
       {% for project in site.data.projects %}
@@ -78,7 +78,7 @@
     {%- if page.posts.length > 0%}
     {%- set posts = page.posts.toArray() %}
     {%- if page.current == 1 %}
-    <h2 class="divider">{{ __('index.posts') }}</h2>
+    <h2 class="divider">工程项目</h2>
     {%- endif %}
     <div class="segments posts">
       {%- for post in posts %}
