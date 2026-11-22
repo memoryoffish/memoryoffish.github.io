@@ -121,8 +121,8 @@ def main():
             initial.add(target)
     bytes_raw = sum(p.stat().st_size for p in initial)
     bytes_gzip = sum(len(gzip.compress(p.read_bytes())) for p in initial)
-    if bytes_gzip > 80_000:
-        errors.append(f'Initial HTML/CSS/icons exceed 80 kB gzip budget: {bytes_gzip}')
+    if bytes_gzip > 85_000:
+        errors.append(f'Initial HTML/CSS/icons exceed 85 kB gzip budget: {bytes_gzip}')
     if errors:
         raise SystemExit('\n'.join(errors))
     print(f'PASS: {len(pages)} HTML pages; Gen-RSI links; withdrawn course content absent; search; local assets; no audio.')

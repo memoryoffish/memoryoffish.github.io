@@ -54,3 +54,7 @@ RSS peer 冲突、工程识别元数据、Python 文件被 Hexo 当 JS 加载、
 ## 2026-11-16 项目介绍重写
 
 首页新增「动态」，项目卡片改为论文原图 + 状态徽章 + 作者列表，项目页按「问题 → 做法 → 结果 → 我的工作」重写。`npm run check` 通过。首页 HTML/CSS/图标 gzip 约 59 KB；3 张懒加载缩略图共 33.6 KB，单独设 60 KB 上限（它们原本也会被算进 80 KB 的 HTML/CSS/图标预算，WebP 已经压缩过，gzip 几乎压不动，混在一起统计没有意义）。1440 与 390 px 首页、项目页、关于页无横向溢出、无 pageerror、无失败请求、图片全部加载；暗色、搜索（「Hugging Face」「物理仿真」均命中）、手机侧栏和 `/projects/#atas` 等锚点均已验证。
+
+## 2026-11-22 第一篇文章
+
+发布《如何让 AI 拥有导演的审美，拍出真实电影感：我做的 AI 导演 skill》（`source/_posts/film-director.md`，配图 `source/images/film-director/promo-poster.jpg`，卡片封面复用首页已加载的 `/static/hero-film.webp`）。首页出现文章卡片后，HTML/CSS/图标 gzip 估算 80,026 bytes，超过原 80 kB 预算；任何一篇文章都会超，经用户同意调到 85 kB。`npm run check` 通过。Playwright 在 1440 与 390 px 下检查首页和文章页：无横向溢出、无 pageerror、无失败请求、无坏图；主题切换可用，搜索「code world model」命中关于页和文章。

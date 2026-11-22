@@ -18,7 +18,7 @@ npm run serve
 
 ## 内容与配置
 
-- `source/_posts/`：未来文章的发布目录，目前没有发布文章。使用 `npx hexo new "文章标题"` 创建新文。
+- `source/_posts/`：文章发布目录。使用 `npx hexo new "文章标题"` 创建新文。
 - `source/_data/projects.yml`：ATAS、ReCA 与 Gen-RSI 的公开项目介绍。
 - `source/projects/index.md`：项目页面。
 - `source/images/`：本站图片。
@@ -37,7 +37,7 @@ Hexo **8.1.2** 及依赖固定在 `package-lock.json`。原作者 [amehime/hexo-
 
 `npm run check` 验证数学与代码渲染，完整重建并检查链接、Gen-RSI 展示、撤下内容不再发布、资源、搜索和音乐禁用。`tools/build.js` 额外捕获日志 ERROR，因为 Hexo 有时在渲染失败时仍返回 0。
 
-搜索包含项目页与个人介绍；有文章时也会收录文章。当前没有发布文章，归档、标签和 RSS 入口隐藏。
+搜索包含项目页与个人介绍；有文章时也会收录文章。没有文章时，归档、标签和 RSS 入口隐藏。
 
 GitHub Actions 检查 PR，并在 `main` 更新时发布；首次需要 Settings → Pages → GitHub Actions。`main` 保存源码，并通过 GitHub Actions 发布生成的 `public/`。
 
