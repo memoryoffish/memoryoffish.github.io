@@ -14,7 +14,7 @@ audio: false
 
 这个 skill 的目的，是让人高效地做出高质量的 AI 电影。举个简单的例子：我一次性跑了 6 个 1 分钟的片子，3 个基本看不出奇怪的切换，3 个有小问题；那 3 个，我看完指出问题，Claude 重抽一次自己就修好了。人只要看片、提意见，剩下的交给 agent，这就是这个 skill 想做到的样子。
 
-仓库在 <https://github.com/memoryoffish/film-director-skill-plugin>，展示页在 <https://memoryoffish.github.io/film-director-page/>，画廊在 <https://memoryoffish.github.io/films/>。
+仓库在 <https://github.com/memoryoffish/film-director-skill-plugin>，画廊在 <https://memoryoffish.github.io/film-director-page/>。
 
 {% localvideo /films/media/director-promo.mp4 /images/film-director/promo-poster.jpg %}
 
@@ -48,7 +48,7 @@ proxy（白模这类代替真实场景的粗几何）是否真能达到 code wor
 
 我觉得目前的很多 skill，其实都没法做到全自动地产出很好的内容。用这个 skill，开头那套组合就能全自动地拍完一部片；有小问题的，我看完提出来，Claude 重抽一次自己就能修好。
 
-我建了一个[画廊](https://memoryoffish.github.io/films/)，专门展示生成的样例，全是自动生成的。之后我也会放上我自己看完提出问题、Claude 修好以后的版本，并把最后的费用一起列出来。
+我建了一个[画廊](https://memoryoffish.github.io/film-director-page/)，专门展示生成的样例，全是自动生成的。之后我也会放上我自己看完提出问题、Claude 修好以后的版本，并把最后的费用一起列出来。
 
 在这个 skill 里，你不会看到 AI 短剧那种非常 AI 的感觉，而是一种拍摄的真实感、艺术感，我也会用画廊把它表现出来。这也是我做 AI 自动化生成一直在追求的东西。
 
@@ -92,5 +92,4 @@ proxy（白模这类代替真实场景的粗几何）是否真能达到 code wor
 瑕疵当然是有的，毕竟视频模型还没到什么都不错的那一档。我希望这个 skill 能让大家一起进一步探索 AI 电影，来探讨怎样让 agent video gen 做得更好。
 
 - 仓库：<https://github.com/memoryoffish/film-director-skill-plugin>
-- 展示页：<https://memoryoffish.github.io/film-director-page/>
-- 画廊：<https://memoryoffish.github.io/films/>
+- 画廊：<https://memoryoffish.github.io/film-director-page/>
