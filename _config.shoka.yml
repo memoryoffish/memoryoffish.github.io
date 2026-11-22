@@ -13,7 +13,6 @@ font:
 menu:
   home: / || home
   projects: /#projects-title || feather
-  Gallery: /films/ || th
 social:
   github: https://github.com/memoryoffish || github
   email: mailto:3230102276@zju.edu.cn || envelope

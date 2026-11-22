@@ -14,6 +14,7 @@
 - 首页「研究项目」一栏改名「项目」，其下新增「Project」一栏放工程项目（`index.njk` + `source/_data/engineering.yml`，目前只有 film-director 的 GitHub 标题和占位链接），文章列表保持原名（2026-11-22 用户要求）。
 - 文章内视频用站点插件 `scripts/local-video.js` 的 `{% localvideo 视频 封面 %}`，输出原生 `<video controls preload="none">`，不自动播放；Shoka 原 `media` 标签依赖已移除的播放器，不用（2026-11-22）。
 - 每个研究项目单独一页（`source/projects/<name>/index.md`，带侧栏，像文章页）；`/projects/` 改为总目录，保留 `#atas` 等锚点给旧链接；首页、关于页的「介绍」指向单独页面；顶栏「项目」跳到首页项目栏 `/#projects-title`（2026-11-22 用户要求）。
+- 2026-11-22 用户要求去掉 Gallery：删除 `/films/` 页面、`film-map.js`、对应 CSS 和顶栏入口；首页 38 秒宣传片卡片保留，视频改放 `static/promo.mp4`。
 - 关闭音乐、烟花、loading、动画、评论与赞赏挂件。
 - 去掉失效 polyfill、CDN vendor 合并脚本、PJAX、原播放器初始化；用本站小脚本处理侧栏、明暗主题和代码复制。
 - 系统字体、本地图标；正文默认可见，无须等待入场脚本。
