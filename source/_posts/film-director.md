@@ -48,7 +48,7 @@ proxy（白模这类代替真实场景的粗几何）是否真能达到 code wor
 
 我觉得目前的很多 skill，其实都没法做到全自动地产出很好的内容。用这个 skill，开头那套组合就能全自动地拍完一部片；有小问题的，我看完提出来，Claude 重抽一次自己就能修好。
 
-我做了一个[展示页](https://memoryoffish.github.io/film-director-page/)，放了 27 部短片，全是自动生成的。我还和目前仍在更新且非常火热的两个 AI video pipeline 和 skill 进行了比较。之后我也会放上修改后的版本：针对全自动生成完的视频，我提出修改意见，Claude 立马就修好了。最后的费用我也会一起列出来。
+我做了一个[展示页](https://memoryoffish.github.io/film-director-page/)，放了 27 部短片，全是自动生成的。我还和目前仍在更新且非常火热的两个 AI video pipeline 和 skill 进行了比较。之后我也会放上一些 human in the loop 的例子：全自动生成的视频，人看完提出问题，Claude 是怎么快速修好的。最后的费用我也会一起列出来。
 
 在这个 skill 里，你不会看到 AI 短剧那种非常 AI 的感觉，而是一种拍摄的真实感、艺术感，我也会用展示页把它表现出来。这也是我做 AI 自动化生成一直在追求的东西。
 
