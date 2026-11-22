@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 PUBLIC = ROOT / 'public'
 HOST = 'memoryoffish.github.io'
 # Independently published GitHub Pages project, verified outside this blog repo.
-PROJECT_SITES = {'https://memoryoffish.github.io/atas_demo/'}
+PROJECT_SITES = {'https://memoryoffish.github.io/atas_demo/', 'https://memoryoffish.github.io/film-director-page/'}
 
 
 class Page(HTMLParser):

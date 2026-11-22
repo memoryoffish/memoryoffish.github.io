@@ -14,11 +14,11 @@ audio: false
 
 这个 skill 的目的，是让人高效地做出高质量的 AI 电影。举个简单的例子：我一次性跑了 6 个 1 分钟的片子，3 个基本看不出奇怪的切换，3 个有小问题；那 3 个，我看完指出问题，Claude 重抽一次自己就修好了。人只要看片、提意见，剩下的交给 agent，这就是这个 skill 想做到的样子。
 
-仓库在 <https://github.com/memoryoffish/film-director>，画廊在 <https://memoryoffish.github.io/films/>。
+仓库在 <https://github.com/memoryoffish/film-director-skill-plugin>，展示页在 <https://memoryoffish.github.io/film-director-page/>，画廊在 <https://memoryoffish.github.io/films/>。
 
-![宣传片封面](/images/film-director/promo-poster.jpg)
+{% localvideo /films/media/director-promo.mp4 /images/film-director/promo-poster.jpg %}
 
-*宣传片封面。四格是四部短片：《雨夜》《第一口》《月亮掉下来了》《两张照片》。3 分钟的宣传片《电影导演 Claude》在仓库首页，四部片的画面都出自真实运行。*
+*宣传片《电影导演 Claude》，3 分 03 秒：Claude 拿到这份 skill，当导演拍了四部短片《雨夜》《第一口》《月亮掉下来了》《两张照片》，画面都出自真实运行。*
 
 ## 为什么做这个 skill
 
@@ -91,5 +91,6 @@ proxy（白模这类代替真实场景的粗几何）是否真能达到 code wor
 
 瑕疵当然是有的，毕竟视频模型还没到什么都不错的那一档。我希望这个 skill 能让大家一起进一步探索 AI 电影，来探讨怎样让 agent video gen 做得更好。
 
-仓库：<https://github.com/memoryoffish/film-director>
-画廊：<https://memoryoffish.github.io/films/>
+- 仓库：<https://github.com/memoryoffish/film-director-skill-plugin>
+- 展示页：<https://memoryoffish.github.io/film-director-page/>
+- 画廊：<https://memoryoffish.github.io/films/>
