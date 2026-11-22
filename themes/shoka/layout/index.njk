@@ -40,7 +40,7 @@
 
     {% if page.current == 1 and site.data.projects %}
     <section class="pub-preview" aria-labelledby="projects-title">
-      <h2 class="divider" id="projects-title"><a href="{{ url_for('/projects/') }}">论文</a></h2>
+      <h2 class="divider" id="projects-title"><a href="{{ url_for('/projects/') }}">项目</a></h2>
       <p class="pub-legend">* 表示共同第一作者；† 表示通讯作者</p>
       <ul class="pub-list">
       {% for project in site.data.projects %}
@@ -48,6 +48,20 @@
           <p class="pub-title"><a href="{{ url_for('/projects/') }}#{{ project.name }}">{{ project.title }}</a> <span class="pub-venue">{{ project.venue }}</span></p>
           <p class="pub-authors">{% if project.authors %}{% for a in project.authors %}{% if a.indexOf('Ye Li') == 0 %}<strong>{{ a }}</strong>{% else %}{{ a }}{% endif %}{% if loop.revindex == 2 %}, and {% elif not loop.last %}, {% endif %}{% endfor %}{% else %}{{ project.authorsNote }}{% endif %}</p>
           <p class="pub-links">{% for link in project.links %}[<a href="{{ link.url }}"{% if link.hot %} class="hot"{% endif %}>{{ link.label }}</a>] {% endfor %}[<a href="{{ url_for('/projects/') }}#{{ project.name }}">介绍</a>]</p>
+        </li>
+      {% endfor %}
+      </ul>
+    </section>
+    {% endif %}
+
+    {% if page.current == 1 and site.data.engineering %}
+    <section class="pub-preview" aria-labelledby="engineering-title">
+      <h2 class="divider" id="engineering-title">Project</h2>
+      <ul class="pub-list">
+      {% for item in site.data.engineering %}
+        <li>
+          <p class="pub-title"><a href="{{ item.github }}">{{ item.title }}</a></p>
+          <p class="pub-links">[<a href="{{ item.github }}">GitHub</a>] {% for link in item.links %}[<a href="{{ link.url }}">{{ link.label }}</a>] {% endfor %}</p>
         </li>
       {% endfor %}
       </ul>
@@ -78,7 +92,7 @@
     {%- if page.posts.length > 0%}
     {%- set posts = page.posts.toArray() %}
     {%- if page.current == 1 %}
-    <h2 class="divider">工程项目</h2>
+    <h2 class="divider">{{ __('index.posts') }}</h2>
     {%- endif %}
     <div class="segments posts">
       {%- for post in posts %}

@@ -1,0 +1,7 @@
+# 首页「Project」一栏：工程项目（2026-11-22 用户要求先放 GitHub 标题和占位链接）
+- name: film-director
+  title: film-director
+  github: https://github.com/memoryoffish/film-director
+  links:
+    - label: 项目页
+      url: "#"
