@@ -1,0 +1,21 @@
+# 友链，2026-11-23 从旧站 master 分支 friends/index.html 同步（名字、链接、描述、颜色照旧）。
+- site: Nana
+  url: https://cagoya.github.io/ZZHZJU.github.io/
+  image: /images/friends/nana.jpg
+  color: "#e9546b"
+  desc: /
+- site: Vanadium的小屋
+  url: https://z-vanadium.github.io/
+  image: /images/friends/vanadium.jpg
+  color: "#39c5bb"
+  desc: /
+- site: 秋月春风的小站
+  url: https://yukinoshitasherry.github.io/
+  image: /images/friends/qiuyue.jpg
+  color: "#39c5bb"
+  desc: 明月守灯寻长梦，梦长寻灯守月明
+- site: Arrietty's Universe
+  url: https://arriettych.github.io
+  image: /images/friends/arrietty.png
+  color: "#39c5bb"
+  desc: Fin`Tech`

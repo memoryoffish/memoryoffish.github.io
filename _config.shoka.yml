@@ -13,6 +13,7 @@ font:
 menu:
   home: / || home
   projects: /#projects-title || feather
+  友链: /friends/ || heart
 social:
   github: https://github.com/memoryoffish || github || "#191717"
   gmail: mailto:lye11965@gmail.com || gmail || "#EA4335"
