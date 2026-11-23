@@ -93,6 +93,8 @@ proxy（白模这类代替真实场景的粗几何）是否真能达到 code wor
 
 - 仓库：<https://github.com/memoryoffish/film-director-skill-plugin>
 - 展示页：<https://memoryoffish.github.io/film-director-page/>
+- YouTube：<https://www.youtube.com/watch?v=hqFiRUvfvLY>
+- X：<https://x.com/nomemoryoffish/status/2124509688863801617>
 
 ---
 
