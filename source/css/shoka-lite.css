@@ -64,6 +64,9 @@ pre, code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospac
 .post pre code { white-space: pre; overflow-wrap: normal; word-break: normal; }
 .post .copy-code { position: sticky; float: right; right: 5px; top: 5px; border: 1px solid var(--grey-4); border-radius: 4px; padding: 2px 8px; background: var(--grey-2); color: var(--text-color); font-size: 12px; cursor: pointer; }
 .post table { display: block; overflow-x: auto; max-width: 100%; }
+.post table { border-collapse: collapse; margin: .5rem 0 1.2rem; font-variant-numeric: tabular-nums; }
+.post th, .post td { padding: .5rem .9rem; border-bottom: 1px solid rgba(128,128,128,.3); white-space: nowrap; }
+.post thead th { border-bottom-color: rgba(128,128,128,.6); }
 .post math { max-width: 100%; overflow-x: auto; overflow-y: hidden; }
 .post math[display="block"], .math-block { display: block; overflow-x: auto; padding: .5rem 0; }
 .news-list { padding: 0 1.5rem; margin: .5rem 0 1.5rem; list-style: none; font-size: .9rem; line-height: 1.8; }
