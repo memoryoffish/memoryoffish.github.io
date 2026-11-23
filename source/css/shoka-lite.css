@@ -86,10 +86,35 @@ pre, code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospac
 .pub-links a { color: inherit; }
 .pub-links a:hover { color: var(--primary-color); }
 .pub-links a.hot { color: var(--pub-hot); }
-.post .pub-title, .post .pub-authors, .post .pub-links { padding-left: .8rem; border-left: 3px solid var(--grey-4); font-size: .9rem; line-height: 1.7; }
-.post .pub-title { padding-top: .1rem; }
-.post .pub-links, .post .pub-last { padding-bottom: .1rem; margin-bottom: 1rem; }
-.post .pub-legend { padding: 0; }
+/* Project pages (/projects/ and /projects/<name>/): paper card, figure with caption, labelled points. */
+.post .pub-title, .post .pub-authors, .post .pub-links, .post .pub-last { margin: 0; padding: 0 1.4rem; background: var(--grey-1); line-height: 1.75; }
+.post .pub-title, .post .pub-authors, .post .pub-links, .post .pub-last { border: 1px solid var(--grey-3); border-width: 0 1px; }
+.post .pub-title { padding-top: 1.2rem; border-top-width: 1px; border-radius: .9rem .9rem 0 0; font-size: 1.08rem; color: var(--grey-9); }
+.post .pub-title strong { font-weight: 700; }
+.post .pub-venue { display: inline-block; margin-left: .5rem; padding: 0 .6rem; border-radius: 999px; font-size: .72rem; line-height: 1.6rem; font-weight: 600; vertical-align: .12em;
+  color: var(--pub-venue); background: color-mix(in srgb, var(--pub-venue) 13%, transparent); }
+.post .pub-authors { padding-top: .45rem; font-size: .86rem; color: var(--grey-6); }
+.post .pub-links, .post .pub-last { padding-bottom: 1.2rem; border-bottom-width: 1px; border-radius: 0 0 .9rem .9rem; margin-bottom: 1.6rem; }
+.post .pub-links { padding-top: .8rem; display: flex; flex-wrap: wrap; gap: .5rem; }
+.post .pub-links a { display: inline-block; padding: .15rem .85rem; border: 1px solid var(--grey-3); border-radius: 999px; background: var(--grey-0); font-size: .8rem; color: var(--grey-7); text-decoration: none; transition: all .15s; }
+.post .pub-links a:hover { color: var(--primary-color); border-color: var(--primary-color); }
+.post .pub-links a.hot { color: var(--pub-hot); border-color: color-mix(in srgb, var(--pub-hot) 45%, transparent); }
+.post .pub-links a.intro { color: #fff; background: var(--primary-color); border-color: var(--primary-color); }
+.post .pub-links a.intro:hover { filter: brightness(1.08); color: #fff; }
+.post .pub-legend { padding: 0; margin: 0 0 .8rem; font-size: .8rem; }
+.post .md p > img[src^="/projects/"] { display: block; margin: 0 auto; padding: .8rem; background: #fff; border: 1px solid var(--grey-3); border-radius: .9rem; box-shadow: 0 2px 12px rgba(0, 0, 0, .05); }
+.post .fig-cap { margin: .5rem 0 1.6rem; text-align: center; font-size: .8rem; color: var(--grey-6); }
+.post ul.points { list-style: none; margin: 0; padding: 0; }
+.post ul.points li { position: relative; margin: 0; padding: 1rem 0 1rem 6.4rem; border-top: 1px dashed var(--grey-3); line-height: 1.85; }
+.post ul.points li:first-child { border-top: 0; }
+.post ul.points li::before { display: none; }
+.post ul.points li > strong:first-child { position: absolute; left: 0; top: 1.15rem; width: 5.2rem; text-align: center; font-size: .78rem; line-height: 1.7; border-radius: 999px; color: var(--grey-7); background: var(--grey-2); }
+.post ul.points li:last-child > strong:first-child { color: #fff; background: var(--primary-color); }
+@media (max-width: 767px) {
+  .post .pub-title, .post .pub-authors, .post .pub-links, .post .pub-last { padding-left: 1rem; padding-right: 1rem; }
+  .post ul.points li { padding-left: 0; }
+  .post ul.points li > strong:first-child { position: static; display: inline-block; width: auto; padding: 0 .8rem; margin: 0 .5rem .2rem 0; }
+}
 .search-page { min-height: 350px; }
 .search-page label { display: block; font-weight: 600; margin: 1rem 0; }
 #search-input { display: block; width: 100%; padding: .6rem .8rem; font: inherit; border: 1px solid var(--grey-4); border-radius: .4rem; background: var(--grey-0); }

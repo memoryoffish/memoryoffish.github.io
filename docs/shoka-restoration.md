@@ -17,6 +17,7 @@
 - 2026-11-22 用户要求去掉 Gallery：删除 `/films/` 页面、`film-map.js`、对应 CSS 和顶栏入口；首页 38 秒宣传片卡片保留，视频改放 `static/promo.mp4`。
 - 侧栏社交链接只留 GitHub、Gmail、小红书（学术邮箱去掉），按 Shoka 原生的「地址 || 图标 || 颜色」配色；GitHub 和 Gmail 图标是 `shoka-lite.css` 里的内嵌 SVG 遮罩（随配色变色），小红书是一个「书」字（2026-11-23 用户要求）。
 - 友链页 `/friends/`（顶栏「友链」）：数据在 `source/_data/friends.yml`，从旧站 `master` 的 friends/index.html 同步；用 `scripts/friend-links.js` 的 `{% friendlinks %}` 输出 Shoka `.links` 卡片，普通链接 + 本地头像（`images/friends/`），不用原 `{% links %}` 的 exturl（2026-11-23 用户要求）。
+- 项目页样式（2026-11-23 用户要求调好看）：论文信息做成一张卡片（会议徽章、作者、圆角链接按钮，总目录里「介绍 →」是主按钮），方法图加白底圆角和图注（`{.fig-cap}`），问题 / 做法 / 结果 / 我的工作用 `{.points}` 列表显示成左标签右正文；首页的紧凑论文列表不变。
 - 关闭音乐、烟花、loading、动画、评论与赞赏挂件。
 - 去掉失效 polyfill、CDN vendor 合并脚本、PJAX、原播放器初始化；用本站小脚本处理侧栏、明暗主题和代码复制。
 - 系统字体、本地图标；正文默认可见，无须等待入场脚本。
