@@ -14,10 +14,9 @@ menu:
   home: / || home
   projects: /#projects-title || feather
 social:
-  github: https://github.com/memoryoffish || github
-  email: mailto:3230102276@zju.edu.cn || envelope
-  gmail: mailto:lye11965@gmail.com || gmail
-  xiaohongshu: https://www.xiaohongshu.com/user/profile/69d9b2d000000000320182a1 || xiaohongshu
+  github: https://github.com/memoryoffish || github || "#191717"
+  gmail: mailto:lye11965@gmail.com || gmail || "#EA4335"
+  xiaohongshu: https://www.xiaohongshu.com/user/profile/69d9b2d000000000320182a1 || xiaohongshu || "#FF2442"
 sidebar:
   position: left
   avatar: memoryoffish-avatar.jpg
