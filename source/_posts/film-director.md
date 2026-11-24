@@ -4,7 +4,7 @@ date: 2026-11-22 19:50:00
 cover: /static/hero-film.webp
 description: 做这个 AI 导演 skill 时的一些感想：agentic code world model、skill 的处境，还有几个视频模型。
 tags: [agent, skill, video generation]
-comments: false
+comments: true
 audio: false
 ---
 

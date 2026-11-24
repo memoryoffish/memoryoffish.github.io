@@ -35,6 +35,12 @@ post:
   count: false
 reward:
   enable: false
+# Post comments (Giscus, GitHub Discussions). Comments render only when both ids are set.
+giscus:
+  repo: memoryoffish/memoryoffish.github.io
+  repo_id: R_kgDOLz-gmQ
+  category: Announcements
+  category_id: DIC_kwDOLz-gmc4DL2F3
 valine:
   appId: ""
   appKey: ""

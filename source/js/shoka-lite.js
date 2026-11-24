@@ -43,3 +43,31 @@ document.querySelectorAll('.promo-card button').forEach((button) => {
     video.play().catch(() => {});
   });
 });
+// Giscus comments under posts: client.js loads only when the comment area comes near the viewport,
+// and the widget follows the site's light / dark toggle.
+(() => {
+  const box = document.querySelector('#comments[data-repo-id]');
+  if (!box) return;
+  const theme = () => (document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light');
+  const load = () => {
+    const script = document.createElement('script');
+    script.src = 'https://giscus.app/client.js';
+    script.async = true;
+    script.crossOrigin = 'anonymous';
+    const attrs = {
+      repo: box.dataset.repo, 'repo-id': box.dataset.repoId,
+      category: box.dataset.category, 'category-id': box.dataset.categoryId,
+      mapping: 'pathname', strict: '1', 'reactions-enabled': '1', 'emit-metadata': '0',
+      'input-position': 'top', theme: theme(), lang: 'zh-CN', loading: 'lazy',
+    };
+    Object.entries(attrs).forEach(([key, value]) => script.setAttribute('data-' + key, value));
+    box.appendChild(script);
+  };
+  new IntersectionObserver((entries, observer) => {
+    if (entries.some(entry => entry.isIntersecting)) { observer.disconnect(); load(); }
+  }, { rootMargin: '600px 0px' }).observe(box);
+  document.getElementById('theme-toggle')?.addEventListener('click', () => {
+    box.querySelector('iframe.giscus-frame')?.contentWindow.postMessage(
+      { giscus: { setConfig: { theme: theme() } } }, 'https://giscus.app');
+  });
+})();

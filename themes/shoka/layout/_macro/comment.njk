@@ -1,5 +1,6 @@
 {% macro render() %}
-{%- if page.comment !== false %}
-  <div class="wrap" id="comments"></div>
+{%- set g = theme.giscus %}
+{%- if page.layout == 'post' and page.comments !== false and g and g.repo_id and g.category_id %}
+  <div class="wrap" id="comments" data-repo="{{ g.repo }}" data-repo-id="{{ g.repo_id }}" data-category="{{ g.category }}" data-category-id="{{ g.category_id }}"></div>
 {%- endif %}
 {% endmacro %}
