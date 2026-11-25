@@ -54,4 +54,5 @@ audio: false
 ## 联系
 
 - [GitHub · memoryoffish](https://github.com/memoryoffish)
+- [英文简历 · CV（PDF）](/pdf/CV.pdf)
 - [学术邮箱 · 3230102276@zju.edu.cn](mailto:3230102276@zju.edu.cn)

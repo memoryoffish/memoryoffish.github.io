@@ -19,6 +19,7 @@
 - 友链页 `/friends/`（顶栏「友链」）：数据在 `source/_data/friends.yml`，从旧站 `master` 的 friends/index.html 同步；用 `scripts/friend-links.js` 的 `{% friendlinks %}` 输出 Shoka `.links` 卡片，普通链接 + 本地头像（`images/friends/`），不用原 `{% links %}` 的 exturl（2026-11-23 用户要求）。
 - 项目页样式（2026-11-23 用户要求调好看）：论文信息做成一张卡片（会议徽章、作者、圆角链接按钮，总目录里「介绍 →」是主按钮），方法图加白底圆角和图注（`{.fig-cap}`），问题 / 做法 / 结果 / 我的工作用 `{.points}` 列表显示成左标签右正文；首页的紧凑论文列表不变。
 - 关闭音乐、烟花、loading、动画、评论与赞赏挂件。
+- 英文简历放在 `source/pdf/CV.pdf`（公开版：去掉手机号，PDF 元信息用 paperscan 清掉）；顶栏加「CV」（图标 `i-file`），关于页「联系」加链接（2026-11-25 用户要求）。
 - 文章页重新开评论，改用 Giscus（评论存在本仓库 GitHub Discussions 的 Announcements 分类，读者用 GitHub 登录）：`_macro/comment.njk` 只在 `layout: post`、`comments` 没关、`giscus.repo_id` 和 `category_id` 都填了时输出 `#comments`；`shoka-lite.js` 等评论区接近视野才加载 `giscus.app/client.js`，并跟随明暗切换；`shoka-lite.css` 让评论框左右边距与正文一致（≥768px 为 2rem，568–767px 为 .5rem，更窄为 0）。页面仍不开评论（2026-11-24 用户要求；同时取消「不用远程字体和 CDN」的限制）。
 - 去掉失效 polyfill、CDN vendor 合并脚本、PJAX、原播放器初始化；用本站小脚本处理侧栏、明暗主题和代码复制。
 - 系统字体、本地图标；正文默认可见，无须等待入场脚本。
