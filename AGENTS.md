@@ -9,5 +9,5 @@
 - Packages are pinned by `package-lock.json`. Original Shoka is vendored under `themes/shoka`, with provenance in `UPSTREAM.md`. Preserve its MIT license and document local edits.
 - Hexo loads all files under `scripts/` as JavaScript plugins. Place maintenance scripts/tests in `tools/`.
 - Math uses `\(...\)`, `\[...\]`, `$$...$$`; `$s1` and other registers are not math. Render math and code highlighting at build time.
-- The English CV is published at `/pdf/CV.pdf` (top-nav "CV" and the about page link to it). It is the public build of `~/Desktop/study_notes/个人/个人简历/Ye-Li-CV-EN.tex` with the phone number removed, and its PDF metadata stripped with `paperscan clean <dir> --apply metadata` (no Creator/Producer/dates). Replace it only with a file prepared the same way.
+- The English CV is published at `/pdf/CV.pdf` (top-nav "CV" and the about page link to it). It is the public build of `~/Desktop/study_notes/个人/个人简历/for-video/Ye-Li-CV-EN.tex` with the phone number removed, and its PDF metadata stripped with `paperscan clean <dir> --apply metadata` (no Creator/Producer/dates). Replace it only with a file prepared the same way.
 - Do not print credentials from the old generated `js/app.js` or copy its service keys/music playlists into this site.
